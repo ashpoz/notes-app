@@ -1,0 +1,93 @@
+
+
+img {
+  width: 100%;
+}
+
+figure {
+  margin: 0;
+  width: 100%;
+}
+
+section {
+  padding: 2em 0;
+}
+
+.mw-sm {
+  max-width: 25%;
+}
+
+.mw-md {
+  max-width: 50%;
+}
+
+.mw-lg {
+  max-width: 75%;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.wrapper {
+  height: 100%;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+main {
+  height: 100%;
+}
+
+
+/* TODO: figure out what exact dimension tablet should start */
+@media (min-width: 600px) {
+  .border-right {
+    border-right: 1px solid #000;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 0% 2%;
+    margin: auto;
+    max-width: 1200px;
+  }
+  .span1 {
+    grid-column: span 1;
+  }
+  .span2 {
+    grid-column: span 2;
+  }
+  .span3 {
+    grid-column: span 3;
+  }
+  .span4 {
+    grid-column: span 4;
+  }
+  .span5 {
+    grid-column: span 5;
+  }
+  .span6 {
+    grid-column: span 6;
+  }
+  .span7 {
+    grid-column: span 7;
+  }
+  .span8 {
+    grid-column: span 8;
+  }
+  .span9 {
+    grid-column: span 9;
+  }
+  .span10 {
+    grid-column: span 10;
+  }
+  .span11 {
+    grid-column: span 11;
+  }
+  .span12 {
+    grid-column: span 12;
+  }
+}
+
