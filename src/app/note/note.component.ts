@@ -17,6 +17,8 @@ export class NoteComponent implements OnInit {
   editorData: any;
   editor: EditorJS;
   editorObserver: MutationObserver;
+  editorDataObj: Array<any>;
+  localStorageObj: Object;
 
   constructor() { }
 
@@ -37,7 +39,19 @@ export class NoteComponent implements OnInit {
 
   saveEditorData() : void {
     this.editor.save().then((outputData) => {
-      this.editorData =  JSON.stringify(outputData, null, 2);
+      this.editorData = JSON.stringify(outputData, null, 2);
+      console.log(outputData.blocks);
+      // let localStorageObj = {};
+
+      outputData.blocks.forEach(block => {
+        this.localStorageObj[block.id!][block.data];
+
+        // check if objects exist
+        // localStorage.setItem('editorjs', localStorageObj[block.id!][block.data]);
+        // localStorage.setItem('editorjs'localStorageObj[block.id!][block.data]);
+      });
+    }).catch((err) => {
+      console.log(err);
     })
   }
 
